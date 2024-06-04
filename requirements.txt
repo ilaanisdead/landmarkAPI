@@ -1,6 +1,5 @@
 fastapi==0.1.0
 uvicorn==0.27.1
-python
 python-multipart
 tensorflow==2.15.0
 tensorflow-serving-api
