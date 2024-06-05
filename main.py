@@ -23,7 +23,9 @@ app.add_middleware(
 )
 
 # MODEL = tf.keras.models.load_model("../models/1")
-MODEL = tf.keras.models.load_model("./1.h5")
+# MODEL = tf.keras.models.load_model("./1.h5")
+MODEL = tf.keras.models.load_model("./1")
+
 CLASS_NAMES = ["Coast","Desert","Forest","Glacier","Mountain"]
 
 @app.get("/ping")
