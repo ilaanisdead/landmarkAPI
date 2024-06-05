@@ -13,8 +13,6 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:4200",
-    "https://app.koyeb.com/",
-    "https://landmarkapi-prefowl-0b2634a9.koyeb.app/",
     
 ]
 app.add_middleware(
@@ -28,8 +26,8 @@ app.add_middleware(
 
 # MODEL = tf.keras.models.load_model("../models/1")
 # MODEL = tf.keras.models.load_model("./1.h5")
-# MODEL = tf.keras.models.load_model("./1")
-MODEL = TFSMLayer("./1", call_endpoint='serving_default')
+MODEL = tf.keras.models.load_model("./1")
+# MODEL = TFSMLayer("./1", call_endpoint='serving_default')
 
 CLASS_NAMES = ["Coast","Desert","Forest","Glacier","Mountain"]
 
