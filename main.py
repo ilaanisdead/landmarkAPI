@@ -7,6 +7,7 @@ import tensorflow as tf
 import cv2
 from fastapi.middleware.cors import CORSMiddleware
 from keras.layers import TFSMLayer
+from keras.models import Model
 
 app = FastAPI()
 
@@ -32,7 +33,7 @@ app.add_middleware(
 input_layer = tf.keras.layers.Input(shape=(180, 180, 3))
 tfsm_layer = TFSMLayer("./1", call_endpoint='serving_default')
 output_layer = tfsm_layer(input_layer)
-MODEL = tf.keras.models(inputs=input_layer, outputs=output_layer)
+MODEL = Model(inputs=input_layer, outputs=output_layer)
 
 CLASS_NAMES = ["Coast","Desert","Forest","Glacier","Mountain"]
 
