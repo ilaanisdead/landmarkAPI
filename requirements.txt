@@ -3,4 +3,5 @@ uvicorn
 python-multipart
 pillow
 opencv-python-headless
+tensorflow==2.15.0
 tensorflow-serving-api
