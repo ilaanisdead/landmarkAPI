@@ -12,7 +12,10 @@ app = FastAPI()
 
 origins = [
     "http://localhost",
-    "http://localhost:4200"
+    "http://localhost:4200",
+    "https://app.koyeb.com/",
+    "https://landmarkapi-prefowl-0b2634a9.koyeb.app/",
+    
 ]
 app.add_middleware(
 
