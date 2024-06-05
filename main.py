@@ -25,9 +25,14 @@ app.add_middleware(
 )
 
 # MODEL = tf.keras.models.load_model("../models/1")
-MODEL = tf.keras.models.load_model("./1.h5")
+# MODEL = tf.keras.models.load_model("./1.h5")
 # MODEL = tf.keras.models.load_model("./1")
 # MODEL = TFSMLayer("./1", call_endpoint='serving_default')
+
+input_layer = tf.keras.layers.Input(shape=(180, 180, 3))
+tfsm_layer = TFSMLayer("./1", call_endpoint='serving_default')
+output_layer = tfsm_layer(input_layer)
+MODEL = tf.keras.models(inputs=input_layer, outputs=output_layer)
 
 CLASS_NAMES = ["Coast","Desert","Forest","Glacier","Mountain"]
 
