@@ -22,7 +22,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("../models/1")
+# MODEL = tf.keras.models.load_model("../models/1")
+MODEL = tf.keras.models.load_model("../modelsv5/1.h5")
 CLASS_NAMES = ["Coast","Desert","Forest","Glacier","Mountain"]
 
 @app.get("/ping")
@@ -56,5 +57,6 @@ async def predict(
     }
 
 if __name__ =="__main__":
+    # MODEL.save('../modelsv5/1.h5')
     print(app.version)
     # uvicorn.run(app,host='localhost', port=8000)
