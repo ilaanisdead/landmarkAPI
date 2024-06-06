@@ -70,5 +70,5 @@ async def predict(
 if __name__ =="__main__":
     # MODEL.save('../modelsv5/1.h5')
     # print(app.version)
-    print(cv2.__version__)
-    # uvicorn.run(app,host='localhost', port=8000)
+    # print(cv2.__version__)
+    uvicorn.run(app,host='localhost', port=8000)
