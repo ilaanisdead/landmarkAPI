@@ -6,8 +6,9 @@ from PIL import Image
 import tensorflow as tf
 import cv2
 from fastapi.middleware.cors import CORSMiddleware
+import keras
 # from keras.layers import TFSMLayer
-from keras.models import Model
+# from keras.models import Model
 
 app = FastAPI()
 
@@ -27,8 +28,8 @@ app.add_middleware(
 
 # MODEL = tf.keras.models.load_model("../models/1")
 # MODEL = tf.keras.models.load_model("./1.h5")
-MODEL = tf.keras.models.load_model("./1")
-# MODEL = TFSMLayer("./1", call_endpoint='serving_default')
+# MODEL = tf.keras.models.load_model("./1")
+MODEL = keras.layers.TFSMLayer("./1.h5", call_endpoint='serving_default')
 
 # input_layer = tf.keras.layers.Input(shape=(180, 180, 3))
 # tfsm_layer = TFSMLayer("./1", call_endpoint='serving_default')
@@ -69,6 +70,6 @@ async def predict(
 
 if __name__ =="__main__":
     # MODEL.save('../modelsv5/1.h5')
-    print(app.version)
-    print(cv2.__version__)
-    # uvicorn.run(app,host='localhost', port=8000)
+    # print(app.version)
+    # print(cv2.__version__)
+    uvicorn.run(app,host='localhost', port=8000)
