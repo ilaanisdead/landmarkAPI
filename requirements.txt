@@ -3,6 +3,6 @@ uvicorn==0.27.1
 python-multipart==0.0.9
 pillow==9.1.0
 opencv-python-headless
-tensorflow==2.15.0
+tensorflow==2.10.0
 numpy==1.24.3
-tensorflow-serving-api==2.14.1
+tensorflow-serving-api==2.10.1
