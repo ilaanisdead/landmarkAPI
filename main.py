@@ -76,9 +76,9 @@ async def predict(
 
 if __name__ =="__main__":
     # MODEL.save('../modelsv5/1.h5')
-    # print(app.version)
+    print(app.version)
     # print(cv2.__version__)
     # tf.saved_model.save(MODEL, f"./{2}")
-    uvicorn.run(app,host='localhost', port=8000)
+    # uvicorn.run(app,host='localhost', port=8000)
 
 
