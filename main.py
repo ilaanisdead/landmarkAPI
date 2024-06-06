@@ -80,3 +80,17 @@ if __name__ =="__main__":
     # print(cv2.__version__)
     # tf.saved_model.save(MODEL, f"./{2}")
     uvicorn.run(app,host='localhost', port=8000)
+
+
+#    "builds":[
+#         {
+#             "src":"api/main.py",
+#             "use":"@vercel/python"
+#         }
+#     ],
+#     "routes":[
+#         {
+#             "src":"/(.*)",
+#             "dest":"api/main.py"
+#         }
+#     ]
