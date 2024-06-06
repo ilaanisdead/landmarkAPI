@@ -82,15 +82,3 @@ if __name__ =="__main__":
     uvicorn.run(app,host='localhost', port=8000)
 
 
-#    "builds":[
-#         {
-#             "src":"api/main.py",
-#             "use":"@vercel/python"
-#         }
-#     ],
-#     "routes":[
-#         {
-#             "src":"/(.*)",
-#             "dest":"api/main.py"
-#         }
-#     ]
