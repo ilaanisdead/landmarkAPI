@@ -15,10 +15,11 @@ import keras
 app = FastAPI()
 
 origins = [
-    "http://localhost",
-    "http://localhost:4200",
-    "https://landmark-415612.web.app/",
-    "https://landmark-415612.web.app/home"
+    "*",
+    # "http://localhost",
+    # "http://localhost:4200",
+    # "https://landmark-415612.web.app",
+    # "https://landmark-415612.web.app/home"
 ]
 app.add_middleware(
 
